@@ -17,13 +17,14 @@ PostGame.post("/", async (req, res) => {
       genres,
       website,
     } = req.body;
+    
     let platformsReformed = [];
     platforms.forEach((element) => {
-      platformsReformed.push(element.value);
+      platformsReformed.push(element.label);
     });
     let genresReformed = [];
     genres.forEach((element) => {
-      genresReformed.push(element.value);
+      genresReformed.push(element.label);
     });
     const newGame = await videogame.create({
       name,

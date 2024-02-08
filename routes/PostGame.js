@@ -26,6 +26,7 @@ PostGame.post("/", async (req, res) => {
     genres.forEach((element) => {
       genresReformed.push(element.label);
     });
+
     const newGame = await videogame.create({
       name,
       date,

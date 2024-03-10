@@ -15,6 +15,7 @@ server.use(
 server.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Credential", "true");
+  res.setHeader('Access-Control-Allow-Origin', 'https://api.rawg.io/');
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"

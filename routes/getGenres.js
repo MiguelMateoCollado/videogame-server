@@ -6,7 +6,7 @@ const getgeneros = express.Router();
 getgeneros.get("/", async (req, res) => {
   try {
     const generosList = await fetch(
-      `https://api.rawg.io/api/genres?key=9094a53c63b44a4bb20f4371bb277ede`
+      `https://api.rawg.io/api/genres?key=8241d0d446564eb08ad666f383656f59`
     ).then((response) => response.json());
 
     let gen = await generosList.results.map((gen) => {

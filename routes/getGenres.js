@@ -17,6 +17,7 @@ getgeneros.get("/", async (req, res) => {
     const allGeneros = await generos.findAll();
     res.status(200).json(await allGeneros);
   } catch (error) {
+    console.log(error)
     res.status(400).send(error.message);
   }
 });

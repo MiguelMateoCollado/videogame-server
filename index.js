@@ -5,6 +5,7 @@ const server = express();
 const bodyParser = require("body-parser");
 require("dotenv").config();
 const port = process.env.PORT || 3001;
+
 server.use(express.json());
 server.use(bodyParser.json());
 server.use(
@@ -15,7 +16,7 @@ server.use(
 server.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Credential", "true");
-  res.setHeader('Access-Control-Allow-Origin', 'https://api.rawg.io/');
+  res.setHeader("Access-Control-Allow-Origin", "https://api.rawg.io/");
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"

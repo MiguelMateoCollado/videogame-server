@@ -23,6 +23,7 @@ getGames.get("/", async (req, res) => {
     });
     return res.status(200).json(gamesDB);
   } catch (error) {
+    console.log(error)
     res.json(error);
   }
 });

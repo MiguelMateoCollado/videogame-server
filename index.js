@@ -19,7 +19,7 @@ server.use((req, res, next) => {
   res.setHeader(
     "Access-Control-Allow-Origin",
     "https://api.rawg.io/",
-    "https://api.mmateo.com"
+    "https://videogames.mmateo.com/"
   );
   res.header(
     "Access-Control-Allow-Headers",
